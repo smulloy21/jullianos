@@ -1,0 +1,30 @@
+#order {
+  display: none;
+}
+#extra {
+  display: none;
+}
+.container {
+  text-align: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+.pizza {
+  display: inline;
+  margin: 6em;
+}
+.pizza, .topping {
+  cursor: pointer;
+  color: #0088cc;
+}
+.pizza:hover, .topping:hover {
+  text-decoration: underline;
+}
+.selected {
+  color: red;
+}
