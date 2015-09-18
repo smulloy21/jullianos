@@ -52,11 +52,12 @@ Order.prototype.calculateTotal = function () {
 $(document).ready(function(){
   var newOrder = new Order;
   $('.pizza').click(function(event){
+    $('.selected').removeClass('selected');
     $(this).addClass("selected");
     var newPizza = new Pizza(parseInt(event.target.id))
     newOrder.addPizza(newPizza);
     newOrder.calculateTotal()
-    $('#pizzas').append('<li>' + newPizza.size + '\" Pizza: </li>');
+    $('#pizzas').append('<li class="ordered-pizza selected">' + newPizza.size + '\" Pizza: </li>');
     $('#total').text(newOrder.total);
     $('#order').show();
     $('#extra').show();
@@ -64,10 +65,11 @@ $(document).ready(function(){
       $(this).addClass("selected");
       var newTopping = event.target.id;
       newPizza.addTopping(newTopping);
-      $('#pizzas').last().text(newPizza.size + '\" Pizza: ' + newPizza.toppings.join(', '));
+      $('#pizzas').children().last().text(newPizza.size + '\" Pizza: ' + newPizza.toppings.join(', '));
       newOrder.calculateTotal();
       $('#total').text(newOrder.total);
       console.log(newOrder.pizzas);
-    })
-  })
+    });
+  });
+  $('.ordered-pizza').click('')
 });

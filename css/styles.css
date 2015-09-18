@@ -1,3 +1,32 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background: url('img/oven.jpg') center center no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  color: white;
+  font-family: 'Italiana', serif;
+}
+button, a {
+  font-family: 'Italiana', serif;
+}
+h1 {
+  font-size: 5em;
+}
+h3 {
+  font-size: 2.5em;
+}
+p {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1.25em;
+}
+li {
+  font-size: 1.25em;
+}
 #order {
   display: none;
 }
@@ -6,23 +35,37 @@
 }
 .container {
   text-align: center;
+  background-color: rgba(0,0,0,.75);
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
 }
 ul {
   margin: 0;
   padding: 0;
+}
+#toppings {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
 }
 li {
   list-style-type: none;
 }
 .pizza {
   display: inline;
-  margin: 6em;
+  margin: 4em;
 }
-.pizza, .topping {
+.pizza, .topping, .ordered-pizza {
   cursor: pointer;
   color: #0088cc;
 }
-.pizza:hover, .topping:hover {
+.pizza:hover, .topping:hover, .ordered-pizza:hover {
   text-decoration: underline;
 }
 .selected {
